@@ -28,6 +28,11 @@ read it, fix a bad line by hand if ever needed.
 - `session` — the whole loop. One concept is a complete session. Rough lengths:
   SKIP ~2–3 min · PRACTICE ~10–15 min · TEACH ~15–30 min. No timer — run it again
   for the next concept, or stop anytime.
+- `interview session` — the DSA + system design track (deadline: recruiting, late
+  September 2026). Different loop: weekly slot quota, self-ranking instead of placement
+  quizzes, problems delivered unlabeled and interleaved, derivation required before
+  code, C++ first attempt / Python on the re-attempt. See
+  `references/interview-track.md`. learncpp is deliberately **not** part of this quota.
 - "what's due" — dashboard only (three counts + next pick).
 - "do 7.3 instead" — override the pick.
 - Multiple sources coexist in one ledger (IDs are namespaced: `learncpp.1.4`,
@@ -47,7 +52,10 @@ predictions line NOW, before session one — that's the point.
 
 **Protocol**
 - Floor: 4 sessions/week. A 10-minute one-concept session counts fully.
-- Week 1: learncpp only. Week 2: add Beej's Guide if the loop feels smooth.
+- Week 1: learncpp only. ~~Week 2: add Beej's Guide if the loop feels smooth.~~
+  **Superseded 2026-07-29:** the second source is the interview track, not Beej's, and
+  learncpp dropped to ad-hoc/low-stakes for the duration. The trial keeps running — the
+  day-14 gate below still happens, just on less learncpp material than planned.
 - Friction → one log line, keep moving. No mid-trial redesigns. (Exception:
   contract violations — "you hinted before I attempted" — get corrected on the spot.)
 - Reread urges → log line, not reread. Strictness is time-boxed to these 14 days;
@@ -79,6 +87,7 @@ trellis/                            # git repo — run `claude` from here
 │   ├── SKILL.md                    # trigger + loop + contracts
 │   └── references/
 │       ├── loop.md                 # full session protocol + ledger schemas
+│       ├── interview-track.md      # DSA + system design loop (deadline-driven)
 │       ├── question-generation.md  # anti-pattern-matching protocol
 │       ├── teaching.md             # TEACH mode: predict → compressed teach → practice
 │       ├── techniques.md           # every technique discussed, incl. deferred/rejected

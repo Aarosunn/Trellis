@@ -1,0 +1,2 @@
+{"ts":"2026-09-02T14:33:00","type":"problem","id":42,"slug":"trapping-rain-water","pattern":"two-pointers","minutes":200,"hints":["nudge","invariant","skeleton"],"solved":true,"notes":"naive O(n^2) first (TLE); off-by-one on loop bound; struggled to drop the i cursor for two-ended pointers"}
+{"ts":"2026-09-02T14:33:00","type":"mistake","pattern":"two-pointers","node":"two-ended-shrink","what":"kept a third index i and rescanned r; running max computed but not stored"}

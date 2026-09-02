@@ -51,8 +51,11 @@ learner's own words) · consuming long videos and retaining structure-less overl
 
 **Fix shape.** Generation gated in front of consumption everywhere: guess before
 exposure (pretesting), attempt before help (silence-first), reasoning before grades.
-Teaching still happens — compressed, followed immediately by forced practice. The
-rejected version is the handed-over digest with no practice attached.
+Learning still happens — via Trellis-curated, verified sources, followed immediately by
+efficient reinforcement practice (retrieval, not rereading). The rejected version is the
+handed-over digest with no practice attached — now also including Trellis's own
+authored explanation substituting for the source, which is what changed in the
+2026-08-12 redesign.
 
 ## RC3 — Goals scoped for impressive, not completable
 

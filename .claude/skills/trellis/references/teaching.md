@@ -37,6 +37,22 @@ effect, and it is why step 1 below is never skipped.
 6. **Source prose is opt-in.** Afterward: "the full section is at <url> if you want the
    long version." Offered once, never pushed, never required to proceed.
 
+## Trigger context changed
+
+TEACH used to fire on a first-pass low score. It now fires only when a PRACTICE item's
+next review also fails (see `references/loop.md`'s Routing section) — two real tests,
+not one guess-driven placement. Two consequences:
+
+- **Scope narrows.** Explain the specific point that's still failing, not the whole
+  section — the learner already read the source and worked the exercises once.
+- **Skip step 1 (Predict).** Guessing before exposure only pays off when exposure
+  hasn't happened yet. By the time TEACH fires here, it has — twice. Go straight to
+  step 2.
+
+The original full sequence (Predict included) still applies wherever TEACH fires on
+genuinely first-touch material — mid-task triage's "blocking" explanations, a `/branch`
+tangent, or the rare case the learner asks to be taught something cold.
+
 ## Fading
 
 Support level is set by history, not mood:

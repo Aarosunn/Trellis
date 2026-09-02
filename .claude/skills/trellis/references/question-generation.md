@@ -39,7 +39,28 @@ inherit the same disease when they take canonical forms.
 6. **Difficulty calibration.** The learner has taken EECS 281 (data structures &
    algorithms) and EECS 370 (computer organization) at Michigan. Questions on early
    material should be quick but non-trivial — testing the C++-specific edges they may
-   not know, not the programming concepts they certainly do.
+   not know, not the programming concepts they certainly do. Question count per label
+   follows from this same calibration: 1 question for a narrow/simple label, up to 3 for
+   a label with several distinct C++-specific edges worth checking — never pad to a flat
+   number just to hit 2–3.
+
+7. **Extension questions, now allowed.** A real read of the source now always precedes
+   the quiz (see `session` step 3 in SKILL.md), so the old boundary — stay within the
+   current chapter's literal text plus already-resolved concepts — no longer needs to
+   be absolute. ~1 question per set may reach beyond the chapter if it's reachable by
+   reasoning from the learner's CS background (EECS 281/370) or a logical extension of
+   the mechanism just read. This is not a license to fabricate: requiring a fact that
+   isn't inferable from either source is still banned — that's the exact failure logged
+   repeatedly before (forward-referencing unresolved chapters, inventing error text,
+   assuming unstated tooling). The line is reasoning vs. requiring memorized trivia
+   nobody gave the learner. Baseline difficulty on every question, not just extension
+   ones, should sit at the top of rule 6's calibration band — the reading pass removes
+   the excuse for softballs.
+
+8. **Further reading, on an extension-question miss only.** If the learner is curious,
+   offer one pointer to further reading via the existing `/branch` mechanic — opt-in,
+   never required to close the item. Misses on standard (non-extension) questions get
+   the normal nugget/PRACTICE/review path instead, no pointer.
 
 ## Feedback loop
 
