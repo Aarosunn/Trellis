@@ -1,6 +1,6 @@
 # EECS 215 — project knowledge upload calendar
 
-Rule: chapter PDF the Friday before its lecture (so `prime` has it). Slides the day of the lecture (so `solidify` has them). HW when issued; HW solutions when posted. Rename on upload per the naming in instructions.md.
+Rule: chapter PDF the Friday before its lecture (so `prime` has it). Slides the day of the lecture (so `solidify` has them). HW when issued; HW solutions when posted. 
 
 | by | upload | for |
 |---|---|---|

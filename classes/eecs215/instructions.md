@@ -1,13 +1,13 @@
 # EECS 215 — Intro to Electronic Circuits (FA26, Terry / Wentzloff)
 
-Tutor skill: `tutor`. Everything below is class-specific input to it.
+Skill: `trellis`. Everything below is class-specific input to it.
 
 ## State
-Repo: `OWNER/Trellis` · path: `classes/eecs215/state.md` · tool: GitHub MCP (`get_file_contents` / `create_or_update_file`).
+Repo: `Aarosunn/Trellis` · path: `classes/eecs215/state.md` · tool: GitHub MCP (`get_file_contents` / `create_or_update_file`).
 If the tool is absent, ask me to paste `state.md`. Never search past chats for it.
 
-## Knowledge file naming
-`chNN_<sections>.pdf` textbook · `lecNN_*.pdf` slides · `hwN.pdf` / `hwN_sol.pdf` · `old_exam_*.pdf` · `lca_notes.pdf` (instructor's Linear Circuit Analysis notes, MNA).
+## Knowledge
+Chapters, lecture slides, HWs, HW solutions, old exams, and the instructor's Linear Circuit Analysis (MNA) notes. Prior-term HWs (W26) are calibration only; this term's HWs win when both exist.
 
 ## Exam profile
 - Closed book. Scientific calculator required (complex matrix math recommended for later units). No computer aids.

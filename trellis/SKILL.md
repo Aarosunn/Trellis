@@ -1,9 +1,9 @@
 ---
-name: tutor
-description: Course tutor for a Claude Project. Probes the edge of the learner's understanding with adaptive MCQs, teaches one node at a time through a concrete instance, drills exam-shaped problems, and cuts textbook fluff. Class-specific facts (exam profile, node list, calendar, state file path) live in the project instructions. Use when the user types prime, solidify, exam, cut, status, or asks to study, review, quiz, or prepare for a lecture or exam.
+name: trellis
+description: Trellis — course tutor for a Claude Project. Probes the edge of the learner's understanding with adaptive MCQs, teaches one node at a time through a concrete instance, drills exam-shaped problems, and cuts textbook fluff. Class-specific facts (exam profile, node list, calendar, state file path) live in the project instructions. Use when the user types prime, solidify, exam, cut, status, or asks to study, review, quiz, or prepare for a lecture or exam.
 ---
 
-# tutor
+# trellis
 
 One skill, every class. The project instructions supply: exam profile, node list, skip list, traps, calendar, visual rules, and the `state.md` location. This file supplies the loop.
 
@@ -112,7 +112,7 @@ Landed → next node, or apply. Missed → re-teach narrower with a different in
 
 ## Apply — T3 problem
 
-Give one problem in the shape of the project's `hw*` / `old_exam*` files: same difficulty, same phrasing habits, same traps. One line on why this one. The user solves on paper and reports answer + method.
+Give one problem in the shape of the HW and old-exam files in project knowledge: same difficulty, same phrasing habits, same traps. One line on why this one. The user solves on paper and reports answer + method.
 
 While they work, chat stays open. When they ask for help, give **one rung** and stop:
 
@@ -154,7 +154,7 @@ Rank every section of the named material:
 
 | Class | Rule |
 |---|---|
-| core | appears in `old_exam*` / `hw*`, or other sections derive from it |
+| core | appears in old exams / HWs, or other sections derive from it |
 | derivable | follows from a core node in ≤2 steps — teach as consequence, never as its own node |
 | skip | named in the material, absent from syllabus, HW, and exams |
 
