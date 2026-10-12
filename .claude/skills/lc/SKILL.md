@@ -83,6 +83,8 @@ A node is one sub-skill: `dummy-head`, `fast-slow`, `reverse-sublist`, `prefix-b
 
 Teach through **motivated discovery driven by a concrete trace**. Show the state, ask what breaks, let the user reach the fix. Do not narrate a derivation at them, and do not just assert the algorithm.
 
+**Motivation before trace, always.** Before any trace: 2-4 lines on what problem the node solves, why the naive way fails, and where else it applies. Never open a node with a diagram and a question. The user has to know what they are looking at.
+
 Shape:
 ```
 null  1 → 2 → 3
@@ -160,6 +162,12 @@ The user runs `:Leet run` and `:Leet submit` themselves.
 Timestamps come from `date`, never guessed.
 
 Append one JSON object per line to `lc-log.jsonl`. Never rewrite the file.
+
+After appending a `problem` line, commit the solution and the log together so attempts are diffable:
+
+```bash
+git -C ~/Dev/Personal/Trellis add leetcode/<id>.*.cpp leetcode/lc-log.jsonl && git -C ~/Dev/Personal/Trellis commit -qm "lc: <id> <solved|attempt>"
+```
 
 ```json
 {"ts":"2026-09-02T21:40:00","type":"probe","pattern":"linked-list","ceiling":"T2","floor":"T1","score":"4/6","nodes_solid":["traversal","dummy-head"],"nodes_shaky":["fast-slow"]}
