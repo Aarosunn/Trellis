@@ -35,9 +35,7 @@ struct TreeNode {
 class Solution {
 public:
   TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {
-    if (root == nullptr)
-      return nullptr;
-    if (root == p || root == q)
+    if (!root || root == p || root == q)
       return root;
 
     TreeNode *searchLeft = lowestCommonAncestor(root->left, p, q);
@@ -45,12 +43,7 @@ public:
 
     if (searchLeft && searchRight)
       return root;
-    if (searchLeft)
-      return searchLeft;
-    if (searchRight)
-      return searchRight;
-    else
-      return nullptr;
+    return searchLeft ? searchLeft : searchRight;
   }
 };
 // @leet end

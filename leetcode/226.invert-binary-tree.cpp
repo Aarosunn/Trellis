@@ -41,9 +41,9 @@ public:
     if (root == nullptr)
       return nullptr;
 
-    TreeNode *temp = root->right;
-    root->right = invertTree(root->left);
-    root->left = invertTree(temp);
+    swap(root->left, root->right);
+    invertTree(root->left);
+    invertTree(root->right);
     return root;
   }
 };
