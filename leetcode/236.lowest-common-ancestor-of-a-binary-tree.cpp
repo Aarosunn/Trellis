@@ -35,12 +35,22 @@ struct TreeNode {
 class Solution {
 public:
   TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {
-
-    // Base Case
-    if (root == nullptr || root->left == nullptr || root->right == nullptr)
+    if (root == nullptr)
       return nullptr;
+    if (root == p || root == q)
+      return root;
 
-    // Recursive Case
+    TreeNode *searchLeft = lowestCommonAncestor(root->left, p, q);
+    TreeNode *searchRight = lowestCommonAncestor(root->right, p, q);
+
+    if (searchLeft && searchRight)
+      return root;
+    if (searchLeft)
+      return searchLeft;
+    if (searchRight)
+      return searchRight;
+    else
+      return nullptr;
   }
 };
 // @leet end
