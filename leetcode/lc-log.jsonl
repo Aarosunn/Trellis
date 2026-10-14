@@ -45,3 +45,4 @@
 {"ts":"2026-10-13T22:56:35","type":"problem","id":70,"slug":"climbing-stairs","pattern":"dp","node":"1d","minutes":15,"hints":["nudge"],"solved":true,"note":"bottom-up after DP rundown + last-decision framing; dp[0]=1 empty-path base"}
 {"ts":"2026-10-14T11:05:25","type":"problem","id":198,"slug":"house-robber","pattern":"dp","node":"1d","minutes":30,"hints":["nudge"],"solved":true,"note":"recurrence right first try; bugs: unsized dp, dp[1] base, mixed n vs n+1 indexing; switched to n+1"}
 {"ts":"2026-10-14T11:05:25","type":"mistake","pattern":"dp","node":"1d","what":"mixed size-n and size-n+1 indexing conventions; dp[1] base wrong (nums[1] not max of first two)"}
+{"ts":"2026-10-14T12:19:43","type":"problem","id":525,"slug":"contiguous-array","pattern":"prefix-sum","node":"prefix-hashmap","minutes":40,"hints":["nudge","invariant"],"solved":true,"note":"needed same-running-sum-means-zero-between explained via trace; then clean first-index map, correct seed"}
