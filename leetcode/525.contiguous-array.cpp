@@ -27,16 +27,16 @@ class Solution {
 public:
   int findMaxLength(vector<int> &nums) {
     int running = 0, maxLength = 0;
-    unordered_map<int, int> um;
-    um[0] = -1;
+    unordered_map<int, int> seen;
+    seen[0] = -1;
 
     for (int i = 0; i < nums.size(); ++i) {
-      running += nums[i] == 0 ? -1 : 1;
-      if (um.count(running)) {
-        int firstSeen = um[running];
+      running += nums[i] ? 1 : -1;
+      if (seen.count(running)) {
+        int firstSeen = seen[running];
         maxLength = max(maxLength, i - firstSeen);
       } else {
-        um[running] = i;
+        seen[running] = i;
       }
     }
 
