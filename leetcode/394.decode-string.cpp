@@ -26,36 +26,29 @@ struct TreeNode {
 class Solution {
 public:
   string decodeString(string s) {
-    int count = 0;
     stack<pair<int, string>> stk;
-    int l = 0;
-    string ans = "";
-    string partial = "";
-    string prevPartial = "";
-    bool isNested = false;
+    string cur = "";
+    int k = 0;
 
-    while (l < s.length()) {
-      if (isdigit(s[l])) {
-        count = count * 10 + (s[l] - '0');
-      } else if (s[l] == '[') {
-        stk.push({count, partial});
-        partial = "";
-        count = 0;
-      } else if (s[l] == ']') {
-        auto res = stk.top();
+    for (char c : s) {
+      if (isdigit(c)) {
+        k = k * 10 + (c - '0');
+      } else if (c == '[') {
+        stk.push({k, cur});
+        cur.clear();
+        k = 0;
+      } else if (c == ']') {
+        auto [times, before] = stk.top();
         stk.pop();
-        prevPartial = res.second;
-        for (int i = 0; i < res.first; ++i)
-          prevPartial += partial;
-        partial = prevPartial;
+        string rep;
+        while (times--)
+          rep += cur;
+        cur = before + rep;
       } else {
-        partial += s[l];
+        cur += c;
       }
-      ++l;
     }
-    ans += partial;
-
-    return ans;
+    return cur;
   }
 };
 // @leet end
