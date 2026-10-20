@@ -51,3 +51,4 @@
 {"ts":"2026-10-16T17:15:03","type":"problem","id":207,"slug":"course-schedule","pattern":"graph","minutes":null,"hints":["nudge","invariant","skeleton"],"solved":true,"note":"DFS 3-state attempt abandoned; Kahn topo sort taught step by step, user wrote it. Complexity answered O(n), corrected to O(V+E)."}
 {"ts":"2026-10-16T17:15:03","type":"mistake","pattern":"graph","node":"dfs-cycle-detect","what":"return dfs(next) exits after first clean neighbor; node never marked done, stale on-path state gives false cycle"}
 {"ts":"2026-10-16T17:15:03","type":"mistake","pattern":"graph","node":"adj-build","what":"local adj shadowed member / unsized adj; reversed edge direction for indegree (direction matters in topo, not in cycle DFS)"}
+{"ts":"2026-10-20T11:13:36","type":"problem","id":695,"slug":"max-area-of-island","pattern":"graph","minutes":null,"hints":[],"solved":true,"note":"grid BFS, mark-on-push; one bounds typo (nj < cols) found in review. Complexity not asked."}
