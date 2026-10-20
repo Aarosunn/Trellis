@@ -24,17 +24,38 @@ struct TreeNode {
 
 // @leet start
 class Solution {
-public:
-  bool canFinish(int numCourses, vector<vector<int>> &prerequisites) {
-    vector<int> indegree(numCourses, 0);
-    vector<vector<int>> adj(numCourses);
+  vector<vector<int>> adj;
+  vector<int> state; // 0 untouched | 1 tracked | 2 finished
 
-    for (auto &e : prerequisites) {
-      indegree[e[0]]++;
-      adj[e[1]].push_back(e[0]);
+  bool dfs(int course) {
+
+    state[course] = 1;
+
+    for (auto &next : adj[course]) {
+      if (state[next] == 1)
+        return false;
+      if (state[next] == 2)
+        continue;
+      if (!dfs(next))
+        return false;
     }
 
+    state[course] = 2;
+
+    return true;
+  }
+
+public:
+  bool canFinish(int numCourses, vector<vector<int>> &prerequisites) {
+    adj.resize(numCourses);
+    vector<int> indegree(numCourses, 0);
     queue<int> ready;
+    int taken = 0;
+
+    for (auto &e : prerequisites) {
+      adj[e[1]].push_back(e[0]);
+      indegree[e[0]]++;
+    }
 
     for (int i = 0; i < numCourses; ++i)
       if (indegree[i] == 0)
@@ -43,14 +64,27 @@ public:
     while (!ready.empty()) {
       int course = ready.front();
       ready.pop();
-      for (int next : adj[course])
-        if (--indegree[next] == 0)
-          ready.push(next);
+      ++taken;
+      for (auto &e : adj[course])
+        if (--indegree[e] == 0)
+          ready.push(e);
     }
-    for (auto &i : indegree)
-      if (i != 0)
-        return false;
-    return true;
+
+    return taken == numCourses;
+
+    // DFS
+    // // Build adj list
+    // adj.resize(numCourses);
+    // state.resize(numCourses, 0);
+    // for (auto &e : prerequisites)
+    //   adj[e[0]].push_back(e[1]);
+    //
+    // // loop sweep call dfs
+    // for (int i = 0; i < numCourses; ++i)
+    //   if (state[i] == 0 && !dfs(i))
+    //     return false;
+    //
+    // return true;
   }
 };
 // @leet end
