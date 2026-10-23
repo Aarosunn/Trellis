@@ -26,7 +26,6 @@ struct TreeNode {
 class Solution {
 public:
   void merge(vector<int> &nums1, int m, vector<int> &nums2, int n) {
-
     if (nums2.empty())
       return;
     else if (m == 0) {
@@ -34,12 +33,12 @@ public:
       return;
     }
 
-    int ptr1 = m - 1, ptr2 = n - 1, back = m + n - 1;
-    while (ptr2 >= 0) {
-      if (ptr1 < 0 || nums2[ptr2] > nums1[ptr1])
-        nums1[back--] = nums2[ptr2--];
+    int l = m - 1, r = n - 1, back = m + n - 1;
+    while (r >= 0) {
+      if (l < 0 || nums2[r] > nums1[l])
+        nums1[back--] = nums2[r--];
       else
-        nums1[back--] = nums1[ptr1--];
+        nums1[back--] = nums1[l--];
     }
   }
 };
