@@ -53,8 +53,7 @@ public:
           ready.push(e);
     }
 
-    vector<int> empty;
-    return order.size() == numCourses ? order : empty;
+    return order.size() == numCourses ? order : vector<int>{};
   }
 };
 // @leet end
