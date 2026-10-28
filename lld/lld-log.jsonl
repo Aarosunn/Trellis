@@ -1,0 +1,3 @@
+{"ts":"2026-10-28T11:26:02","type":"problem","nn":1,"slug":"connect-four","difficulty":"easy","source":"imported","note":"self-written spec in header comment; no PROMPT.md or tests"}
+{"ts":"2026-10-28T11:34:23","type":"problem","nn":2,"slug":"order-book-levels","difficulty":"medium"}
+{"ts":"2026-10-28T12:04:21","type":"learn","topic":"parsing","exercise":"done","note":"kv drill; missed unknown-command else branch, fixed after one table hint"}

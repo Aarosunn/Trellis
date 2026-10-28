@@ -94,6 +94,8 @@ trellis/                            # git repo — run `claude` from here
 │       ├── root-causes.md          # RC1–RC4 in full
 │       ├── iterate-mode.md         # design-partner mode
 │       └── roadmap.md              # v1.5 / v2 / app phase, and settled decisions
+├── .claude/skills/lld/SKILL.md     # /lld: LLD/OOD coach (learn, problems, review)
+├── lld/                            # lld-log.jsonl, topics.md, run_tests.sh, problems/
 ├── state/ledger.jsonl              # append-only event log — the single source of truth
 └── README.md
 ```
