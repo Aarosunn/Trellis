@@ -76,7 +76,7 @@ While they solve, chat stays open. Help on request only, one rung at a time, use
 
 Read `attempt.cpp` that turn before saying anything about it.
 
-1. Run `run_tests.sh <dir> --hidden`. Report pass/fail per test. Hidden inputs may be shown now, for failing tests.
+1. If `.hidden/tests/` is missing (gitignored; fresh clone), rebuild it first: `python3 .hidden/gen.py`, compile `.hidden/ref.cpp`, write each `.out` by running ref on its `.in`. Then run `run_tests.sh <dir> --hidden`. Report pass/fail per test. Hidden inputs may be shown now, for failing tests.
 2. Rubric, 1–5, one line each:
    - **correct** — matches the spec exactly, formats and error codes included
    - **design** — clear responsibilities, encapsulated state, no god class, no needless inheritance
