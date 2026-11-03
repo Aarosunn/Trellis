@@ -25,6 +25,6 @@ struct TreeNode {
 // @leet start
 class Solution {
 public:
-  int totalFruit(vector<int> &fruits) { int l = 0, r = 0; }
+  int totalFruit(vector<int> &fruits) {}
 };
 // @leet end

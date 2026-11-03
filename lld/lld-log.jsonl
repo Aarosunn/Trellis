@@ -1,3 +1,8 @@
 {"ts":"2026-10-28T11:26:02","type":"problem","nn":1,"slug":"connect-four","difficulty":"easy","source":"imported","note":"self-written spec in header comment; no PROMPT.md or tests"}
 {"ts":"2026-10-28T11:34:23","type":"problem","nn":2,"slug":"order-book-levels","difficulty":"medium"}
 {"ts":"2026-10-28T12:04:21","type":"learn","topic":"parsing","exercise":"done","note":"kv drill; missed unknown-command else branch, fixed after one table hint"}
+{"ts":"2026-10-28T15:45:36","type":"review","nn":2,"visible":"3/3","hidden":"12/12","hidden_first_run":"11/12","rubric":{"correct":5,"design":3,"ds":5,"edge":4,"quality":3,"ext":3},"hints":["nudge","nudge","nudge","full:parseNum"]}
+{"ts":"2026-10-28T15:45:36","type":"mistake","axis":"edge","topic":null,"what":"numeric tokens parsed with >>: accepted +10 and prefix tokens (1B); E1 side check initially ran after E2 range checks"}
+{"ts":"2026-10-28T15:45:36","type":"mistake","axis":"correct","topic":null,"what":"first draft: no OK on successful ADD/CANCEL/MODIFY; side check used != || != (always true)"}
+{"ts":"2026-10-28T15:45:36","type":"mistake","axis":"design","topic":"principle.solid","what":"OrderBook prints output/errors itself; domain coupled to IO, global ob"}
+{"ts":"2026-10-28T15:45:36","type":"mistake","axis":"quality","topic":"principle.dry","what":"bid/ask branches duplicated in add/cancel/modify"}
